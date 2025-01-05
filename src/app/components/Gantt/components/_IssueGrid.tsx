@@ -19,9 +19,9 @@ import {
 
 // TODO: Move this to a global location
 const colorsMap = {
-  TASK: 'var(--color-deeporange-200)',
-  PROJ: 'var(--color-teal-300)',
-  STORY: 'var(--color-tertiary)',
+  TASK: '#ffab91',
+  PROJ: '#4db6ac',
+  STORY: '#757575',
 };
 
 // TODO: Move this to a global location
@@ -54,41 +54,41 @@ const styles = `
 `;
 
 // TODO: Update the styles
-const customStyles = {
-  ganttTimePeriod: {
-    display: 'grid',
-    gridAutoFlow: 'column',
-    gridAutoColumns: 'minmax(30px, 1fr)',
-    outline: '0.5px solid var(--color-outline)',
-    textAlign: 'center',
-    minHeight: 'var(--min-cell-height)',
-  },
-  ganttTimePeriodSpan: {
-    margin: 'auto',
-  },
-  ganttTimePeriodCell: {
-    position: 'relative',
-    outline: '0.5px solid var(--color-outline)',
-    marginTop: '0.5px',
-    width: '30px',
-    minHeight: 'var(--min-cell-height)',
-  },
-  taskDuration: {
-    position: 'absolute',
-    minHeight: 'calc(var(--min-cell-height) - 1px)',
-    zIndex: '1',
-    background:
-      'linear-gradient(90deg, var(--color-primary-light) 0%, var(--color-primary-dark) 100%)',
-    borderRadius: 'var(--border-radius)',
-    boxShadow: '3px 3px 3px rgba(0, 0, 0, 0.05)',
-    cursor: 'move',
-  },
-  header: {
-    display: 'flex',
-    flexBasis: '30%',
-    justifyContent: 'space-between',
-  },
-};
+// const customStyles = {
+//   ganttTimePeriod: {
+//     display: 'grid',
+//     gridAutoFlow: 'column',
+//     gridAutoColumns: 'minmax(30px, 1fr)',
+//     outline: '0.5px solid #00000010',
+//     textAlign: 'center',
+//     minHeight: '40px',
+//   },
+//   ganttTimePeriodSpan: {
+//     margin: 'auto',
+//   },
+//   ganttTimePeriodCell: {
+//     position: 'relative',
+//     outline: '0.5px solid #00000010',
+//     marginTop: '0.5px',
+//     width: '30px',
+//     minHeight: '40px',
+//   },
+//   taskDuration: {
+//     position: 'absolute',
+//     minHeight: 'calc(40px - 1px)',
+//     zIndex: '1',
+//     background:
+//       'linear-gradient(90deg, var(--color-primary-light) 0%, var(--color-primary-dark) 100%)',
+//     borderRadius: 'var(--border-radius)',
+//     boxShadow: '3px 3px 3px rgba(0, 0, 0, 0.05)',
+//     cursor: 'move',
+//   },
+//   header: {
+//     display: 'flex',
+//     flexBasis: '30%',
+//     justifyContent: 'space-between',
+//   },
+// };
 
 // Add interfaces for the data structures
 // interface SprintData {
@@ -125,33 +125,47 @@ const handleReplacingLocalIssue = async (
   issues: Issue[],
   writeLocalData?: (issues: Issue[]) => void
 ) => {
-  const updatedIssues = issues.map((issue) => {
-    if (issue.id === newIssue.id) {
-      return newIssue;
+  // Create new array with replaced issue
+  const updatedIssues = issues.map((issue) =>
+    issue.id === newIssue.id ? newIssue : issue
+  );
+
+  const newArr: Issue[] = [];
+
+  // Loop over the updated issues and add them to the new flattenedarray
+  updatedIssues.map((issue) => {
+    // If value is already in the array, skip it
+    if (newArr.filter((i) => i.id === issue.id).length > 0) {
+      return;
     }
-    return issue;
+    newArr.push(issue);
+    // Loop over any children and add them to the new array
+    if (issue.children) {
+      issue.children.map((child) => {
+        if (child.id === newIssue.id) {
+          newArr.push(newIssue);
+        } else {
+          newArr.push(child);
+        }
+      });
+    }
+    // Delete children from the issue that is getting saved
+    delete issue.children;
   });
-
-  if (writeLocalData) {
-    writeLocalData(updatedIssues);
-  }
-  // try {
-  //   const response = await fetch('/api/gantt/update', {
-  //     method: 'POST',
-  //     headers: {
-  //       'Content-Type': 'application/json',
-  //     },
-  //     body: JSON.stringify({ updatedIssues }),
-  //   });
-
-  //   if (response.ok) {
-  //     console.log('File written successfully');
-  //   } else {
-  //     console.error('Error writing file');
-  //   }
-  // } catch (error) {
-  //   console.error('Error:', error);
-  // }
+  const response = await fetch('/api/gantt/issue/updateAll', {
+    method: 'POST',
+    body: JSON.stringify(newArr),
+  }).then((response) => {
+    response.json().then((data) => {
+      console.log('response', data);
+    });
+    if (response.ok) {
+      console.log('File written successfully');
+    } else {
+      console.error('Error writing file');
+    }
+  });
+  return response;
 };
 
 const handleUpdateTaskStartEndDates = (
@@ -370,16 +384,20 @@ const TimeDuration: React.FC<TimeDurationProps> = ({
           onDragOver={handleDragOver}
           onDrop={handleDrop}
           style={{
-            ...customStyles.ganttTimePeriodCell,
+            position: 'relative',
+            outline: '0.5px solid #00000010',
+            marginTop: '0.5px',
+            width: '30px',
+            minHeight: '40px',
             backgroundColor:
               over?.task === issue?.id && over?.date === formattedDate
-                ? 'var(--color-red-transparent-33)'
+                ? 'rgba(255, 0, 0, 0.33)'
                 : j === currentDate?.day &&
                   startMonth.getMonth() + 1 + i === currentDate?.month
-                ? 'var(--color-red-transparent-33)'
+                ? 'rgba(255, 0, 0, 0.33)'
                 : dayOfTheWeek === 'S'
-                ? 'var(--color-tertiary)'
-                : 'var(--color-white)',
+                ? '#e0e0e0'
+                : '#ffffff',
           }}
           data-task={issue?.id}
           data-month={startMonth.getMonth() + 1}
@@ -407,7 +425,6 @@ const TimeDuration: React.FC<TimeDurationProps> = ({
                 textOverflow: 'ellipsis',
                 alignItems: 'center',
                 height: '40px', // TODO: Should we make this a variable so one change for all?
-                border: '3px solid var(--color-white)',
                 borderRadius: '7px',
                 justifyContent: 'center',
               }}
@@ -426,7 +443,14 @@ const TimeDuration: React.FC<TimeDurationProps> = ({
       <div key={`table-rows-${i}-${issue.id}`}>
         <div
           className={`task_row_content task_row_content-${issue.id}`}
-          style={customStyles.ganttTimePeriod}
+          style={{
+            display: 'grid',
+            gridAutoFlow: 'column',
+            gridAutoColumns: 'minmax(30px, 1fr)',
+            outline: '0.5px solid #00000010',
+            textAlign: 'center',
+            minHeight: '40px',
+          }}
         >
           {taskRow}
         </div>

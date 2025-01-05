@@ -87,15 +87,17 @@ export default function GanttBody({
             ref={gridBodyRef}
             onScroll={handleXScroll}
           >
-            {projects.map((issue) => (
-              <IssueGrid
-                issue={issue}
-                timeRange={timeRange}
-                key={issue.id}
-                issues={issues}
-                writeLocalData={writeLocalData}
-              />
-            ))}
+            {projects.map((issue) => {
+              return (
+                <IssueGrid
+                  issue={issue}
+                  timeRange={timeRange}
+                  key={issue.id}
+                  issues={issues}
+                  writeLocalData={writeLocalData}
+                />
+              );
+            })}
           </Grid>
         </Grid>
       </Box>

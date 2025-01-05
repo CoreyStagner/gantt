@@ -1,0 +1,1022 @@
+[
+  {
+    "name": "Issue 1",
+    "id": "TEST-1",
+    "status": 100,
+    "endDate": {
+      "y": "2025",
+      "m": "1",
+      "d": "20"
+    },
+    "startDate": {
+      "y": "2025",
+      "m": "1",
+      "d": "10"
+    },
+    "issue_type": "TASK",
+    "assigned_to": "EMP01",
+    "assigned_date": "2024-11-30T00:00:00.000Z",
+    "created_by": "EMP01",
+    "created_date": "2024-11-30T00:00:00.000Z",
+    "updated_by": "EMP01",
+    "updated_date": "2024-11-30T00:00:00.000Z",
+    "summary": "This is the first issue",
+    "description": "This is the first issue's description",
+    "acceptance_criteria": "This is the first issue's acceptance criteria",
+    "ref_to": null,
+    "ref_by": null,
+    "dependency_to": "TEST-7",
+    "dependency_by": "TEST-8",
+    "assigned_iteration": null
+  },
+  {
+    "name": "Issue 2",
+    "id": "TEST-2",
+    "status": 100,
+    "endDate": {
+      "y": "2025",
+      "m": "1",
+      "d": "2"
+    },
+    "startDate": {
+      "y": "2025",
+      "m": "1",
+      "d": "2"
+    },
+    "issue_type": "TASK",
+    "assigned_to": "EMP01",
+    "assigned_date": "2024-11-30T00:00:00.000Z",
+    "created_by": "EMP01",
+    "created_date": "2024-11-30T00:00:00.000Z",
+    "updated_by": "EMP01",
+    "updated_date": "2024-11-30T00:00:00.000Z",
+    "summary": "This is the second issue",
+    "description": "This is the second issue's description",
+    "acceptance_criteria": "This is the second issue's acceptance criteria",
+    "ref_to": ["PROJ-1"],
+    "ref_by": null,
+    "dependency_to": "TEST-7",
+    "dependency_by": "TEST-8",
+    "assigned_iteration": null
+  },
+  {
+    "name": "Issue 3",
+    "id": "TEST-3",
+    "status": 100,
+    "endDate": {
+      "y": "2025",
+      "m": "1",
+      "d": "3"
+    },
+    "startDate": {
+      "y": "2025",
+      "m": "1",
+      "d": "3"
+    },
+    "issue_type": "TASK",
+    "assigned_to": "EMP01",
+    "assigned_date": "2024-11-30T00:00:00.000Z",
+    "created_by": "EMP01",
+    "created_date": "2024-11-30T00:00:00.000Z",
+    "updated_by": "EMP01",
+    "updated_date": "2024-11-30T00:00:00.000Z",
+    "summary": "This is the third issue",
+    "description": "This is the third issue's description",
+    "acceptance_criteria": "This is the third issue's acceptance criteria",
+    "ref_to": ["PROJ-1"],
+    "ref_by": null,
+    "dependency_to": "TEST-7",
+    "dependency_by": "TEST-8",
+    "assigned_iteration": null
+  },
+  {
+    "name": "Issue 4",
+    "id": "TEST-4",
+    "status": 100,
+    "endDate": {
+      "y": "2025",
+      "m": "1",
+      "d": "4"
+    },
+    "startDate": {
+      "y": "2025",
+      "m": "1",
+      "d": "4"
+    },
+    "issue_type": "TASK",
+    "assigned_to": "EMP01",
+    "assigned_date": "2024-11-30T00:00:00.000Z",
+    "created_by": "EMP01",
+    "created_date": "2024-11-30T00:00:00.000Z",
+    "updated_by": "EMP01",
+    "updated_date": "2024-11-30T00:00:00.000Z",
+    "summary": "This is the fourth issue",
+    "description": "This is the fourth issue's description",
+    "acceptance_criteria": "This is the fourth issue's acceptance criteria",
+    "ref_to": ["PROJ-1"],
+    "ref_by": null,
+    "dependency_to": "TEST-7",
+    "dependency_by": "TEST-4",
+    "assigned_iteration": null
+  },
+  {
+    "name": "Issue 5",
+    "id": "TEST-5",
+    "status": 100,
+    "endDate": {
+      "y": "2025",
+      "m": "1",
+      "d": "5"
+    },
+    "startDate": {
+      "y": "2025",
+      "m": "1",
+      "d": "5"
+    },
+    "issue_type": "TASK",
+    "assigned_to": "EMP01",
+    "assigned_date": "2024-11-30T00:00:00.000Z",
+    "created_by": "EMP01",
+    "created_date": "2024-11-30T00:00:00.000Z",
+    "updated_by": "EMP01",
+    "updated_date": "2024-11-30T00:00:00.000Z",
+    "summary": "This is the fifth issue",
+    "description": "This is the fifth issue's description",
+    "acceptance_criteria": "This is the fifth issue's acceptance criteria",
+    "ref_to": ["PROJ-1"],
+    "ref_by": null,
+    "dependency_to": "TEST-7",
+    "dependency_by": "TEST-8",
+    "assigned_iteration": null
+  },
+  {
+    "name": "Issue 6",
+    "id": "TEST-6",
+    "status": 100,
+    "endDate": {
+      "y": "2025",
+      "m": "1",
+      "d": "6"
+    },
+    "startDate": {
+      "y": "2025",
+      "m": "1",
+      "d": "6"
+    },
+    "issue_type": "TASK",
+    "assigned_to": "EMP01",
+    "assigned_date": "2024-11-30T00:00:00.000Z",
+    "created_by": "EMP01",
+    "created_date": "2024-11-30T00:00:00.000Z",
+    "updated_by": "EMP01",
+    "updated_date": "2024-11-30T00:00:00.000Z",
+    "summary": "This is the sixth issue",
+    "description": "This is the sixth issue's description",
+    "acceptance_criteria": "This is the sixth issue's acceptance criteria",
+    "ref_to": ["PROJ-1"],
+    "ref_by": null,
+    "dependency_to": "TEST-7",
+    "dependency_by": "TEST-8",
+    "assigned_iteration": null
+  },
+  {
+    "name": "Issue 7",
+    "id": "TEST-7",
+    "status": 100,
+    "endDate": {
+      "y": "2025",
+      "m": "1",
+      "d": "7"
+    },
+    "startDate": {
+      "y": "2025",
+      "m": "1",
+      "d": "7"
+    },
+    "issue_type": "TASK",
+    "assigned_to": "EMP01",
+    "assigned_date": "2024-11-30T00:00:00.000Z",
+    "created_by": "EMP01",
+    "created_date": "2024-11-30T00:00:00.000Z",
+    "updated_by": "EMP01",
+    "updated_date": "2024-11-30T00:00:00.000Z",
+    "summary": "This is the seventh issue",
+    "description": "This is the seventh issue's description",
+    "acceptance_criteria": "This is the seventh issue's acceptance criteria",
+    "ref_to": ["PROJ-1"],
+    "ref_by": null,
+    "dependency_to": "TEST-7",
+    "dependency_by": "TEST-8",
+    "assigned_iteration": null
+  },
+  {
+    "name": "Issue 8",
+    "id": "TEST-8",
+    "status": 100,
+    "endDate": {
+      "y": "2025",
+      "m": "1",
+      "d": "8"
+    },
+    "startDate": {
+      "y": "2025",
+      "m": "1",
+      "d": "8"
+    },
+    "issue_type": "TASK",
+    "assigned_to": "EMP01",
+    "assigned_date": "2024-11-30T00:00:00.000Z",
+    "created_by": "EMP01",
+    "created_date": "2024-11-30T00:00:00.000Z",
+    "updated_by": "EMP01",
+    "updated_date": "2024-11-30T00:00:00.000Z",
+    "summary": "This is the eighth issue",
+    "description": "This is the eighth issue's description",
+    "acceptance_criteria": "This is the eighth issue's acceptance criteria",
+    "ref_to": ["PROJ-1"],
+    "ref_by": null,
+    "dependency_to": "TEST-7",
+    "dependency_by": "TEST-8",
+    "assigned_iteration": null
+  },
+  {
+    "name": "Issue 9",
+    "id": "TEST-9",
+    "status": 100,
+    "endDate": {
+      "y": "2025",
+      "m": "1",
+      "d": "9"
+    },
+    "startDate": {
+      "y": "2025",
+      "m": "1",
+      "d": "9"
+    },
+    "issue_type": "TASK",
+    "assigned_to": "EMP01",
+    "assigned_date": "2024-11-30T00:00:00.000Z",
+    "created_by": "EMP01",
+    "created_date": "2024-11-30T00:00:00.000Z",
+    "updated_by": "EMP01",
+    "updated_date": "2024-11-30T00:00:00.000Z",
+    "summary": "This is the ninth issue",
+    "description": "This is the ninth issue's description",
+    "acceptance_criteria": "This is the ninth issue's acceptance criteria",
+    "ref_to": ["PROJ-1"],
+    "ref_by": null,
+    "dependency_to": "TEST-7",
+    "dependency_by": "TEST-8",
+    "assigned_iteration": null
+  },
+  {
+    "name": "Issue 10",
+    "id": "TEST-10",
+    "status": 100,
+    "endDate": {
+      "y": "2025",
+      "m": "1",
+      "d": "10"
+    },
+    "startDate": {
+      "y": "2025",
+      "m": "1",
+      "d": "10"
+    },
+    "issue_type": "TASK",
+    "assigned_to": "EMP01",
+    "assigned_date": "2024-11-30T00:00:00.000Z",
+    "created_by": "EMP01",
+    "created_date": "2024-11-30T00:00:00.000Z",
+    "updated_by": "EMP01",
+    "updated_date": "2024-11-30T00:00:00.000Z",
+    "summary": "This is the tenth issue",
+    "description": "This is the tenth issue's description",
+    "acceptance_criteria": "This is the tenth issue's acceptance criteria",
+    "ref_to": ["PROJ-1"],
+    "ref_by": null,
+    "dependency_to": "TEST-7",
+    "dependency_by": "TEST-8",
+    "assigned_iteration": null
+  },
+  {
+    "name": "Issue 11",
+    "id": "TEST-11",
+    "status": 100,
+    "endDate": {
+      "y": "2025",
+      "m": "1",
+      "d": "11"
+    },
+    "startDate": {
+      "y": "2025",
+      "m": "1",
+      "d": "11"
+    },
+    "issue_type": "TASK",
+    "assigned_to": "EMP01",
+    "assigned_date": "2024-11-30T00:00:00.000Z",
+    "created_by": "EMP01",
+    "created_date": "2024-11-30T00:00:00.000Z",
+    "updated_by": "EMP01",
+    "updated_date": "2024-11-30T00:00:00.000Z",
+    "summary": "This is the eleventh issue",
+    "description": "This is the eleventh issue's description",
+    "acceptance_criteria": "This is the eleventh issue's acceptance criteria",
+    "ref_to": ["PROJ-1"],
+    "ref_by": null,
+    "dependency_to": "TEST-7",
+    "dependency_by": "TEST-8",
+    "assigned_iteration": null
+  },
+  {
+    "name": "Issue 12",
+    "id": "TEST-12",
+    "status": 100,
+    "endDate": {
+      "y": "2025",
+      "m": "1",
+      "d": "12"
+    },
+    "startDate": {
+      "y": "2025",
+      "m": "1",
+      "d": "12"
+    },
+    "issue_type": "TASK",
+    "assigned_to": "EMP01",
+    "assigned_date": "2024-11-30T00:00:00.000Z",
+    "created_by": "EMP01",
+    "created_date": "2024-11-30T00:00:00.000Z",
+    "updated_by": "EMP01",
+    "updated_date": "2024-11-30T00:00:00.000Z",
+    "summary": "This is the twelfth issue",
+    "description": "This is the twelfth issue's description",
+    "acceptance_criteria": "This is the twelfth issue's acceptance criteria",
+    "ref_to": ["PROJ-1"],
+    "ref_by": null,
+    "dependency_to": "TEST-7",
+    "dependency_by": "TEST-8",
+    "assigned_iteration": null
+  },
+  {
+    "name": "Issue 13",
+    "id": "TEST-13",
+    "status": 100,
+    "endDate": {
+      "y": "2025",
+      "m": "1",
+      "d": "13"
+    },
+    "startDate": {
+      "y": "2025",
+      "m": "1",
+      "d": "13"
+    },
+    "issue_type": "TASK",
+    "assigned_to": "EMP01",
+    "assigned_date": "2024-11-30T00:00:00.000Z",
+    "created_by": "EMP01",
+    "created_date": "2024-11-30T00:00:00.000Z",
+    "updated_by": "EMP01",
+    "updated_date": "2024-11-30T00:00:00.000Z",
+    "summary": "This is the thirteenth issue",
+    "description": "This is the thirteenth issue's description",
+    "acceptance_criteria": "This is the thirteenth issue's acceptance criteria",
+    "ref_to": ["PROJ-1"],
+    "ref_by": null,
+    "dependency_to": "TEST-7",
+    "dependency_by": "TEST-8",
+    "assigned_iteration": null
+  },
+  {
+    "name": "Issue 14",
+    "id": "TEST-14",
+    "status": 100,
+    "endDate": {
+      "y": "2025",
+      "m": "1",
+      "d": "14"
+    },
+    "startDate": {
+      "y": "2025",
+      "m": "1",
+      "d": "14"
+    },
+    "issue_type": "TASK",
+    "assigned_to": "EMP01",
+    "assigned_date": "2024-11-30T00:00:00.000Z",
+    "created_by": "EMP01",
+    "created_date": "2024-11-30T00:00:00.000Z",
+    "updated_by": "EMP01",
+    "updated_date": "2024-11-30T00:00:00.000Z",
+    "summary": "This is the fourteenth issue",
+    "description": "This is the fourteenth issue's description",
+    "acceptance_criteria": "This is the fourteenth issue's acceptance criteria",
+    "ref_to": ["PROJ-2"],
+    "ref_by": null,
+    "dependency_to": "TEST-7",
+    "dependency_by": "TEST-8",
+    "assigned_iteration": null
+  },
+  {
+    "name": "Issue 15",
+    "id": "TEST-15",
+    "status": 100,
+    "endDate": {
+      "y": "2025",
+      "m": "1",
+      "d": "15"
+    },
+    "startDate": {
+      "y": "2025",
+      "m": "1",
+      "d": "15"
+    },
+    "issue_type": "TASK",
+    "assigned_to": "EMP01",
+    "assigned_date": "2024-11-30T00:00:00.000Z",
+    "created_by": "EMP01",
+    "created_date": "2024-11-30T00:00:00.000Z",
+    "updated_by": "EMP01",
+    "updated_date": "2024-11-30T00:00:00.000Z",
+    "summary": "This is the fifteenth issue",
+    "description": "This is the fifteenth issue's description",
+    "acceptance_criteria": "This is the fifteenth issue's acceptance criteria",
+    "ref_to": ["PROJ-2"],
+    "ref_by": null,
+    "dependency_to": "TEST-7",
+    "dependency_by": "TEST-8",
+    "assigned_iteration": null
+  },
+  {
+    "name": "Issue 16",
+    "id": "TEST-16",
+    "status": 100,
+    "endDate": {
+      "y": "2025",
+      "m": "1",
+      "d": "16"
+    },
+    "startDate": {
+      "y": "2025",
+      "m": "1",
+      "d": "16"
+    },
+    "issue_type": "TASK",
+    "assigned_to": "EMP01",
+    "assigned_date": "2024-11-30T00:00:00.000Z",
+    "created_by": "EMP01",
+    "created_date": "2024-11-30T00:00:00.000Z",
+    "updated_by": "EMP01",
+    "updated_date": "2024-11-30T00:00:00.000Z",
+    "summary": "This is the sixteenth issue",
+    "description": "This is the sixteenth issue's description",
+    "acceptance_criteria": "This is the sixteenth issue's acceptance criteria",
+    "ref_to": ["PROJ-2"],
+    "ref_by": null,
+    "dependency_to": "TEST-7",
+    "dependency_by": "TEST-8",
+    "assigned_iteration": null
+  },
+  {
+    "name": "Issue 17",
+    "id": "TEST-17",
+    "status": 100,
+    "endDate": {
+      "y": "2025",
+      "m": "1",
+      "d": "17"
+    },
+    "startDate": {
+      "y": "2025",
+      "m": "1",
+      "d": "17"
+    },
+    "issue_type": "TASK",
+    "assigned_to": "EMP01",
+    "assigned_date": "2024-11-30T00:00:00.000Z",
+    "created_by": "EMP01",
+    "created_date": "2024-11-30T00:00:00.000Z",
+    "updated_by": "EMP01",
+    "updated_date": "2024-11-30T00:00:00.000Z",
+    "summary": "This is the seventeenth issue",
+    "description": "This is the seventeenth issue's description",
+    "acceptance_criteria": "This is the seventeenth issue's acceptance criteria",
+    "ref_to": ["PROJ-2"],
+    "ref_by": null,
+    "dependency_to": "TEST-7",
+    "dependency_by": "TEST-8",
+    "assigned_iteration": null
+  },
+  {
+    "name": "Issue 18",
+    "id": "TEST-18",
+    "status": 100,
+    "endDate": {
+      "y": "2025",
+      "m": "1",
+      "d": "18"
+    },
+    "startDate": {
+      "y": "2025",
+      "m": "1",
+      "d": "18"
+    },
+    "issue_type": "TASK",
+    "assigned_to": "EMP01",
+    "assigned_date": "2024-11-30T00:00:00.000Z",
+    "created_by": "EMP01",
+    "created_date": "2024-11-30T00:00:00.000Z",
+    "updated_by": "EMP01",
+    "updated_date": "2024-11-30T00:00:00.000Z",
+    "summary": "This is the eighteenth issue",
+    "description": "This is the eighteenth issue's description",
+    "acceptance_criteria": "This is the eighteenth issue's acceptance criteria",
+    "ref_to": ["PROJ-2"],
+    "ref_by": null,
+    "dependency_to": "TEST-7",
+    "dependency_by": "TEST-8",
+    "assigned_iteration": null
+  },
+  {
+    "name": "Issue 19",
+    "id": "TEST-19",
+    "status": 100,
+    "endDate": {
+      "y": "2025",
+      "m": "1",
+      "d": "19"
+    },
+    "startDate": {
+      "y": "2025",
+      "m": "1",
+      "d": "19"
+    },
+    "issue_type": "TASK",
+    "assigned_to": "EMP01",
+    "assigned_date": "2024-11-30T00:00:00.000Z",
+    "created_by": "EMP01",
+    "created_date": "2024-11-30T00:00:00.000Z",
+    "updated_by": "EMP01",
+    "updated_date": "2024-11-30T00:00:00.000Z",
+    "summary": "This is the nineteenth issue",
+    "description": "This is the nineteenth issue's description",
+    "acceptance_criteria": "This is the nineteenth issue's acceptance criteria",
+    "ref_to": ["PROJ-2"],
+    "ref_by": null,
+    "dependency_to": "TEST-7",
+    "dependency_by": "TEST-8",
+    "assigned_iteration": null
+  },
+  {
+    "name": "Issue 20",
+    "id": "TEST-20",
+    "status": 100,
+    "endDate": {
+      "y": "2025",
+      "m": "1",
+      "d": "20"
+    },
+    "startDate": {
+      "y": "2025",
+      "m": "1",
+      "d": "20"
+    },
+    "issue_type": "TASK",
+    "assigned_to": "EMP01",
+    "assigned_date": "2024-11-30T00:00:00.000Z",
+    "created_by": "EMP01",
+    "created_date": "2024-11-30T00:00:00.000Z",
+    "updated_by": "EMP01",
+    "updated_date": "2024-11-30T00:00:00.000Z",
+    "summary": "This is the twentieth issue",
+    "description": "This is the twentieth issue's description",
+    "acceptance_criteria": "This is the twentieth issue's acceptance criteria",
+    "ref_to": ["PROJ-2"],
+    "ref_by": null,
+    "dependency_to": "TEST-7",
+    "dependency_by": "TEST-8",
+    "assigned_iteration": null
+  },
+  {
+    "name": "Issue 21",
+    "id": "TEST-21",
+    "status": 100,
+    "endDate": {
+      "y": "2025",
+      "m": "1",
+      "d": "21"
+    },
+    "startDate": {
+      "y": "2025",
+      "m": "1",
+      "d": "21"
+    },
+    "issue_type": "TASK",
+    "assigned_to": "EMP01",
+    "assigned_date": "2024-11-30T00:00:00.000Z",
+    "created_by": "EMP01",
+    "created_date": "2024-11-30T00:00:00.000Z",
+    "updated_by": "EMP01",
+    "updated_date": "2024-11-30T00:00:00.000Z",
+    "summary": "This is the twenty-first issue",
+    "description": "This is the twenty-first issue's description",
+    "acceptance_criteria": "This is the twenty-first issue's acceptance criteria",
+    "ref_to": ["PROJ-2"],
+    "ref_by": null,
+    "dependency_to": "TEST-7",
+    "dependency_by": "TEST-8",
+    "assigned_iteration": null
+  },
+  {
+    "name": "Issue 22",
+    "id": "TEST-22",
+    "status": 100,
+    "endDate": {
+      "y": "2025",
+      "m": "1",
+      "d": "22"
+    },
+    "startDate": {
+      "y": "2025",
+      "m": "1",
+      "d": "22"
+    },
+    "issue_type": "TASK",
+    "assigned_to": "EMP01",
+    "assigned_date": "2024-11-30T00:00:00.000Z",
+    "created_by": "EMP01",
+    "created_date": "2024-11-30T00:00:00.000Z",
+    "updated_by": "EMP01",
+    "updated_date": "2024-11-30T00:00:00.000Z",
+    "summary": "This is the twenty-second issue",
+    "description": "This is the twenty-second issue's description",
+    "acceptance_criteria": "This is the twenty-second issue's acceptance criteria",
+    "ref_to": ["PROJ-2"],
+    "ref_by": null,
+    "dependency_to": "TEST-7",
+    "dependency_by": "TEST-8",
+    "assigned_iteration": null
+  },
+  {
+    "name": "Issue 23",
+    "id": "TEST-23",
+    "status": 100,
+    "endDate": {
+      "y": "2025",
+      "m": "1",
+      "d": "23"
+    },
+    "startDate": {
+      "y": "2025",
+      "m": "1",
+      "d": "23"
+    },
+    "issue_type": "TASK",
+    "assigned_to": "EMP01",
+    "assigned_date": "2024-11-30T00:00:00.000Z",
+    "created_by": "EMP01",
+    "created_date": "2024-11-30T00:00:00.000Z",
+    "updated_by": "EMP01",
+    "updated_date": "2024-11-30T00:00:00.000Z",
+    "summary": "This is the twenty-third issue",
+    "description": "This is the twenty-third issue's description",
+    "acceptance_criteria": "This is the twenty-third issue's acceptance criteria",
+    "ref_to": ["PROJ-2"],
+    "ref_by": null,
+    "dependency_to": "TEST-7",
+    "dependency_by": "TEST-8",
+    "assigned_iteration": null
+  },
+  {
+    "name": "Issue 24",
+    "id": "TEST-24",
+    "status": 100,
+    "endDate": {
+      "y": "2025",
+      "m": "1",
+      "d": "24"
+    },
+    "startDate": {
+      "y": "2025",
+      "m": "1",
+      "d": "24"
+    },
+    "issue_type": "TASK",
+    "assigned_to": "EMP01",
+    "assigned_date": "2024-11-30T00:00:00.000Z",
+    "created_by": "EMP01",
+    "created_date": "2024-11-30T00:00:00.000Z",
+    "updated_by": "EMP01",
+    "updated_date": "2024-11-30T00:00:00.000Z",
+    "summary": "This is the twenty-fourth issue",
+    "description": "This is the twenty-fourth issue's description",
+    "acceptance_criteria": "This is the twenty-fourth issue's acceptance criteria",
+    "ref_to": ["PROJ-2"],
+    "ref_by": null,
+    "dependency_to": "TEST-7",
+    "dependency_by": "TEST-8",
+    "assigned_iteration": null
+  },
+  {
+    "name": "Issue 25",
+    "id": "TEST-25",
+    "status": 100,
+    "endDate": {
+      "y": "2025",
+      "m": "1",
+      "d": "25"
+    },
+    "startDate": {
+      "y": "2025",
+      "m": "1",
+      "d": "25"
+    },
+    "issue_type": "TASK",
+    "assigned_to": "EMP01",
+    "assigned_date": "2024-11-30T00:00:00.000Z",
+    "created_by": "EMP01",
+    "created_date": "2024-11-30T00:00:00.000Z",
+    "updated_by": "EMP01",
+    "updated_date": "2024-11-30T00:00:00.000Z",
+    "summary": "This is the twenty-fifth issue",
+    "description": "This is the twenty-fifth issue's description",
+    "acceptance_criteria": "This is the twenty-fifth issue's acceptance criteria",
+    "ref_to": ["PROJ-2"],
+    "ref_by": null,
+    "dependency_to": "TEST-7",
+    "dependency_by": "TEST-8",
+    "assigned_iteration": null
+  },
+  {
+    "name": "Issue 26",
+    "id": "TEST-26",
+    "status": 100,
+    "endDate": {
+      "y": "2025",
+      "m": "1",
+      "d": "26"
+    },
+    "startDate": {
+      "y": "2025",
+      "m": "1",
+      "d": "26"
+    },
+    "issue_type": "TASK",
+    "assigned_to": "EMP01",
+    "assigned_date": "2024-11-30T00:00:00.000Z",
+    "created_by": "EMP01",
+    "created_date": "2024-11-30T00:00:00.000Z",
+    "updated_by": "EMP01",
+    "updated_date": "2024-11-30T00:00:00.000Z",
+    "summary": "This is the twenty-sixth issue",
+    "description": "This is the twenty-sixth issue's description",
+    "acceptance_criteria": "This is the twenty-sixth issue's acceptance criteria",
+    "ref_to": ["PROJ-2"],
+    "ref_by": null,
+    "dependency_to": "TEST-7",
+    "dependency_by": "TEST-8",
+    "assigned_iteration": null
+  },
+  {
+    "name": "Issue 27",
+    "id": "TEST-27",
+    "status": 100,
+    "endDate": {
+      "y": "2025",
+      "m": "1",
+      "d": "27"
+    },
+    "startDate": {
+      "y": "2025",
+      "m": "1",
+      "d": "27"
+    },
+    "issue_type": "TASK",
+    "assigned_to": "EMP01",
+    "assigned_date": "2024-11-30T00:00:00.000Z",
+    "created_by": "EMP01",
+    "created_date": "2024-11-30T00:00:00.000Z",
+    "updated_by": "EMP01",
+    "updated_date": "2024-11-30T00:00:00.000Z",
+    "summary": "This is the twenty-seventh issue",
+    "description": "This is the twenty-seventh issue's description",
+    "acceptance_criteria": "This is the twenty-seventh issue's acceptance criteria",
+    "ref_to": ["PROJ-2"],
+    "ref_by": null,
+    "dependency_to": "TEST-7",
+    "dependency_by": "TEST-8",
+    "assigned_iteration": null
+  },
+  {
+    "name": "Issue 28",
+    "id": "TEST-28",
+    "status": 100,
+    "endDate": {
+      "y": "2025",
+      "m": "1",
+      "d": "28"
+    },
+    "startDate": {
+      "y": "2025",
+      "m": "1",
+      "d": "28"
+    },
+    "issue_type": "TASK",
+    "assigned_to": "EMP01",
+    "assigned_date": "2024-11-30T00:00:00.000Z",
+    "created_by": "EMP01",
+    "created_date": "2024-11-30T00:00:00.000Z",
+    "updated_by": "EMP01",
+    "updated_date": "2024-11-30T00:00:00.000Z",
+    "summary": "This is the twenty-eighth issue",
+    "description": "This is the twenty-eighth issue's description",
+    "acceptance_criteria": "This is the twenty-eighth issue's acceptance criteria",
+    "ref_to": ["PROJ-3"],
+    "ref_by": null,
+    "dependency_to": "TEST-7",
+    "dependency_by": "TEST-8",
+    "assigned_iteration": null
+  },
+  {
+    "name": "Issue 29",
+    "id": "TEST-29",
+    "status": 100,
+    "endDate": {
+      "y": "2025",
+      "m": "1",
+      "d": "29"
+    },
+    "startDate": {
+      "y": "2025",
+      "m": "1",
+      "d": "29"
+    },
+    "issue_type": "TASK",
+    "assigned_to": "EMP01",
+    "assigned_date": "2024-11-30T00:00:00.000Z",
+    "created_by": "EMP01",
+    "created_date": "2024-11-30T00:00:00.000Z",
+    "updated_by": "EMP01",
+    "updated_date": "2024-11-30T00:00:00.000Z",
+    "summary": "This is the twenty-ninth issue",
+    "description": "This is the twenty-ninth issue's description",
+    "acceptance_criteria": "This is the twenty-ninth issue's acceptance criteria",
+    "ref_to": ["PROJ-3"],
+    "ref_by": null,
+    "dependency_to": "TEST-7",
+    "dependency_by": "TEST-8",
+    "assigned_iteration": null
+  },
+  {
+    "name": "Issue 30",
+    "id": "TEST-30",
+    "status": 100,
+    "endDate": {
+      "y": "2025",
+      "m": "1",
+      "d": "30"
+    },
+    "startDate": {
+      "y": "2025",
+      "m": "1",
+      "d": "30"
+    },
+    "issue_type": "TASK",
+    "assigned_to": "EMP01",
+    "assigned_date": "2024-11-30T00:00:00.000Z",
+    "created_by": "EMP01",
+    "created_date": "2024-11-30T00:00:00.000Z",
+    "updated_by": "EMP01",
+    "updated_date": "2024-11-30T00:00:00.000Z",
+    "summary": "This is the thirtieth issue",
+    "description": "This is the thirtieth issue's description",
+    "acceptance_criteria": "This is the thirtieth issue's acceptance criteria",
+    "ref_to": ["PROJ-3"],
+    "ref_by": null,
+    "dependency_to": "TEST-7",
+    "dependency_by": "TEST-8",
+    "assigned_iteration": null
+  },
+  {
+    "name": "Issue 31",
+    "id": "TEST-31",
+    "status": 100,
+    "endDate": {
+      "y": "2025",
+      "m": "1",
+      "d": "31"
+    },
+    "startDate": {
+      "y": "2025",
+      "m": "1",
+      "d": "31"
+    },
+    "issue_type": "TASK",
+    "assigned_to": "EMP01",
+    "assigned_date": "2024-11-30T00:00:00.000Z",
+    "created_by": "EMP01",
+    "created_date": "2024-11-30T00:00:00.000Z",
+    "updated_by": "EMP01",
+    "updated_date": "2024-11-30T00:00:00.000Z",
+    "summary": "This is the thirty-first issue",
+    "description": "This is the thirty-first issue's description",
+    "acceptance_criteria": "This is the thirty-first issue's acceptance criteria",
+    "ref_to": ["PROJ-3"],
+    "ref_by": null,
+    "dependency_to": "TEST-7",
+    "dependency_by": "TEST-8",
+    "assigned_iteration": null
+  },
+  {
+    "name": "Project 1",
+    "id": "PROJ-1",
+    "status": 100,
+    "endDate": {
+      "y": "2025",
+      "m": "1",
+      "d": "14"
+    },
+    "startDate": {
+      "y": "2025",
+      "m": "1",
+      "d": "1"
+    },
+    "issue_type": "PROJ",
+    "assigned_to": "EMP01",
+    "assigned_date": "2024-11-30T00:00:00.000Z",
+    "created_by": "EMP01",
+    "created_date": "2024-11-30T00:00:00.000Z",
+    "updated_by": "EMP01",
+    "updated_date": "2024-11-30T00:00:00.000Z",
+    "summary": "This is the thirty-first issue",
+    "description": "This is the thirty-first issue's description",
+    "acceptance_criteria": "This is the thirty-first issue's acceptance criteria",
+    "ref_to": null,
+    "ref_by": null,
+    "dependency_to": "TEST-7",
+    "dependency_by": "TEST-8",
+    "assigned_iteration": null
+  },
+  {
+    "name": "Project 2",
+    "id": "PROJ-2",
+    "status": 100,
+    "endDate": {
+      "y": "2025",
+      "m": "1",
+      "d": "28"
+    },
+    "startDate": {
+      "y": "2025",
+      "m": "1",
+      "d": "15"
+    },
+    "issue_type": "PROJ",
+    "assigned_to": "EMP01",
+    "assigned_date": "2024-11-30T00:00:00.000Z",
+    "created_by": "EMP01",
+    "created_date": "2024-11-30T00:00:00.000Z",
+    "updated_by": "EMP01",
+    "updated_date": "2024-11-30T00:00:00.000Z",
+    "summary": "This is the thirty-first issue",
+    "description": "This is the thirty-first issue's description",
+    "acceptance_criteria": "This is the thirty-first issue's acceptance criteria",
+    "ref_to": null,
+    "ref_by": null,
+    "dependency_to": "TEST-7",
+    "dependency_by": "TEST-8",
+    "assigned_iteration": null
+  },
+  {
+    "name": "Project 3",
+    "id": "PROJ-3",
+    "status": 100,
+    "endDate": {
+      "y": "2025",
+      "m": "1",
+      "d": "31"
+    },
+    "startDate": {
+      "y": "2025",
+      "m": "1",
+      "d": "28"
+    },
+    "issue_type": "PROJ",
+    "assigned_to": "EMP01",
+    "assigned_date": "2024-11-30T00:00:00.000Z",
+    "created_by": "EMP01",
+    "created_date": "2024-11-30T00:00:00.000Z",
+    "updated_by": "EMP01",
+    "updated_date": "2024-11-30T00:00:00.000Z",
+    "summary": "This is the thirty-first issue",
+    "description": "This is the thirty-first issue's description",
+    "acceptance_criteria": "This is the thirty-first issue's acceptance criteria",
+    "ref_to": null,
+    "ref_by": null,
+    "dependency_to": "TEST-7",
+    "dependency_by": "TEST-8",
+    "assigned_iteration": null
+  }
+]

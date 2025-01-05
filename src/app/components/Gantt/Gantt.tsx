@@ -1,9 +1,9 @@
 'use client';
 
 import React, { useState, useEffect, useRef } from 'react';
-import { styled } from '@mui/material/styles';
+// import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
-import Paper from '@mui/material/Paper';
+// import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid2';
 import GanttHeader from './components/_GanttHeader';
 import GanttBody from './components/_GanttBody';
@@ -16,9 +16,19 @@ interface TimeRange {
   toSelectYear: string;
 }
 
+interface DateObject {
+  y: number;
+  m: number;
+  d: number;
+}
 interface Issue {
   id: string;
-  issue_type: string;
+  name: string;
+  issue_type: 'TASK' | 'PROJ' | 'STORY';
+  startDate?: DateObject;
+  endDate?: DateObject;
+  assigned_iteration?: number;
+  children?: Issue[];
   ref_to?: string[];
   child?: boolean;
   parent?: string;
@@ -31,7 +41,7 @@ interface Project extends Issue {
 
 interface GanttProps {
   localData?: Issue[];
-  writeLocalData?: (data: Issue[]) => void;
+  writeLocalData?: (data: Project[]) => void;
 }
 
 // const Item = styled(Paper)(({ theme }) => ({
@@ -82,17 +92,23 @@ export default function Gantt({ localData, writeLocalData }: GanttProps) {
     })();
     // Get the issues from the API and handle assigning to the correct project
     (async () => {
-      let results;
-      // TODO: HACK: This is used to decide if the data is coming from local JSON file or a DB. Remove this when we have working env variables.
-      const dev_datasource = localData ? 'local' : false;
-      if (dev_datasource === 'local') {
-        results = localData;
-      } else {
-        // Fetch the issues from the API
-        results = await fetch('/api/get/issue').then((response) =>
-          response.json()
-        );
-      }
+      const results: Issue[] = localData || [];
+      // // TODO: HACK: This is used to decide if the data is coming from local JSON file or a DB. Remove this when we have working env variables.
+      // const dev_datasource = localData ? 'local' : false;
+      // if (dev_datasource === 'local') {
+      //   console.log('testing here', localData);
+      //   results = await fetch('/api/get/issue').then((response) => {
+      //     console.log('testing here', response);
+      //     return response.json();
+      //   });
+      //   results = localData || [];
+      // } else {
+      //   // Fetch the issues from the API
+      //   // results = await fetch('/api/get/issue').then((response) => {
+      //   //   console.log(response);
+      //   //   response.json();
+      //   // });
+      // }
       if (!results?.length) return;
       // Placeholder variable for all projects
       const projects: Project[] = [];
@@ -180,16 +196,16 @@ export default function Gantt({ localData, writeLocalData }: GanttProps) {
           <Grid size={12}>
             <GanttHeader
               timeRange={timeRange}
-              gridHeaderRef={gridHeaderRef}
+              gridHeaderRef={gridHeaderRef as React.RefObject<HTMLDivElement>}
               handleXScroll={handleGridHeaderScroll}
             />
           </Grid>
           <Grid size={12}>
             <GanttBody
-              issues={issues}
-              projects={projects}
+              issues={issues as Issue[]}
+              projects={projects as Project[]}
               timeRange={timeRange}
-              gridBodyRef={gridBodyRef}
+              gridBodyRef={gridBodyRef as React.RefObject<HTMLDivElement>}
               handleXScroll={handleGridBodyScroll}
               writeLocalData={writeLocalData}
             />
