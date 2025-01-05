@@ -1,0 +1,17 @@
+[
+  { "foo": "bar" },
+  {
+    "level": "VERBOSE",
+    "uuid": "2b52e0bb-9d13-4758-a243-466ec293346a",
+    "message": "Email successfully sent {\"status\":200,\"id\":\"<20250101162928.fdfc0cd31de3e658@sandbox9f5071da06e94547b204d222bc6e259a.mailgun.org>\",\"message\":\"Queued. Thank you.\"}",
+    "data": null,
+    "timestamp": "2025-01-01T16:29:28.782Z"
+  },
+  {
+    "level": "VERBOSE",
+    "uuid": "2b52e0bb-9d13-4758-a243-466ec293346a",
+    "message": "Email successfully sent {\"status\":200,\"id\":\"<20250101163041.92affc4d5f3a706f@sandbox9f5071da06e94547b204d222bc6e259a.mailgun.org>\",\"message\":\"Queued. Thank you.\"}",
+    "data": "\"{\\\"status\\\":200,\\\"id\\\":\\\"<20250101163041.92affc4d5f3a706f@sandbox9f5071da06e94547b204d222bc6e259a.mailgun.org>\\\",\\\"message\\\":\\\"Queued. Thank you.\\\"}\"",
+    "timestamp": "2025-01-01T16:30:42.375Z"
+  }
+]
