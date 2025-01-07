@@ -28,6 +28,7 @@ const styles = `
     justify-content: space-between;
   }
   .task_header-time {
+    padding-top: 25px;
     display: grid;
     width: 70%;
   }

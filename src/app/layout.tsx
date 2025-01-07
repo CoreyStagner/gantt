@@ -1,9 +1,10 @@
-import type { Metadata } from "next";
-import "@/src/sass/globals.scss";
-import { SessionProvider } from "next-auth/react";
+import type { Metadata } from 'next';
+import '@/src/sass/globals.scss';
+import './styles/globals.css';
+import { SessionProvider } from 'next-auth/react';
 
 export const metadata: Metadata = {
-  title: "Sentinal Authentication",
+  title: 'Gantt Chart',
 };
 
 export default function RootLayout({
@@ -12,7 +13,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang='en'>
       <SessionProvider>
         <body>{children}</body>
       </SessionProvider>

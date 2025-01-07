@@ -22,38 +22,10 @@ import IssueGrid from './_IssueGrid';
 
 // Add interfaces for props
 
-interface DateObject {
-  y: number;
-  m: number;
-  d: number;
-}
-
-interface Issue {
-  id: string;
-  name: string;
-  issue_type: 'TASK' | 'PROJ' | 'STORY';
-  startDate?: DateObject;
-  endDate?: DateObject;
-  assigned_iteration?: number;
-  children?: Issue[];
-}
-
-interface Project {
-  id: string;
-  // Add other project properties as needed
-}
-
-interface TimeRange {
-  fromSelectYear: string;
-  fromSelectMonth: number;
-  toSelectYear: string;
-  toSelectMonth: number;
-}
-
 interface GanttBodyProps {
   issues: Issue[];
   timeRange: TimeRange;
-  projects: Issue[];
+  projects: Project[];
   gridBodyRef: React.RefObject<HTMLDivElement>;
   handleXScroll: (event: React.UIEvent<HTMLDivElement>) => void;
   writeLocalData: (data: Project[]) => void; // Replace 'any' with specific type if known

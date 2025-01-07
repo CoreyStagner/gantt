@@ -3,6 +3,7 @@ import React, {
   useState,
   // useEffect
 } from 'react';
+
 // Material Imports
 // import { styled } from '@mui/material/styles';
 // Helper Function Imports
@@ -97,28 +98,28 @@ const styles = `
 //   endDate: string;
 // }
 
-interface DateObject {
-  y: number;
-  m: number;
-  d: number;
-}
+// interface DateObject {
+//   y: number;
+//   m: number;
+//   d: number;
+// }
 
-interface Issue {
-  id: string;
-  name: string;
-  issue_type: 'TASK' | 'PROJ' | 'STORY';
-  startDate?: DateObject;
-  endDate?: DateObject;
-  assigned_iteration?: number;
-  children?: Issue[];
-}
+// interface Issue {
+//   id: string;
+//   name: string;
+//   issue_type: 'TASK' | 'PROJ' | 'STORY';
+//   startDate?: DateObject;
+//   endDate?: DateObject;
+//   assigned_iteration?: number;
+//   children?: Issue[];
+// }
 
-interface TimeRange {
-  fromSelectYear: string;
-  fromSelectMonth: number;
-  toSelectYear: string;
-  toSelectMonth: number;
-}
+// interface TimeRange {
+//   fromSelectYear: string;
+//   fromSelectMonth: number;
+//   toSelectYear: string;
+//   toSelectMonth: number;
+// }
 
 const handleReplacingLocalIssue = async (
   newIssue: Issue,
@@ -528,6 +529,7 @@ export default function IssueGrid({
             }}
           >
             <TimeDuration
+              key={`timeDuration-${issue.id}`}
               issue={issue}
               timeRange={timeRange}
               issues={issues}
@@ -538,7 +540,7 @@ export default function IssueGrid({
       </div>
       {issue?.children?.map((childIssue, idx) => (
         <IssueGrid
-          key={idx}
+          key={`issueGrid-${issue.id}-${idx}`}
           issue={childIssue}
           timeRange={timeRange}
           parent={issue}

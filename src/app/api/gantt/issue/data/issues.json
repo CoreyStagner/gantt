@@ -36,12 +36,12 @@
     "endDate": {
       "y": 2025,
       "m": 1,
-      "d": 2
+      "d": 14
     },
     "startDate": {
       "y": 2025,
       "m": 1,
-      "d": 2
+      "d": 14
     },
     "issue_type": "TASK",
     "assigned_to": "EMP01",
@@ -59,21 +59,23 @@
     "ref_by": null,
     "dependency_to": "TEST-7",
     "dependency_by": "TEST-8",
-    "assigned_iteration": null
+    "assigned_iteration": null,
+    "child": true,
+    "parent": "PROJ-1"
   },
   {
     "name": "Issue 3",
     "id": "TEST-3",
     "status": 100,
     "endDate": {
-      "y": "2025",
-      "m": "1",
-      "d": "3"
+      "y": 2025,
+      "m": 1,
+      "d": 13
     },
     "startDate": {
-      "y": "2025",
-      "m": "1",
-      "d": "3"
+      "y": 2025,
+      "m": 1,
+      "d": 13
     },
     "issue_type": "TASK",
     "assigned_to": "EMP01",
@@ -91,21 +93,23 @@
     "ref_by": null,
     "dependency_to": "TEST-7",
     "dependency_by": "TEST-8",
-    "assigned_iteration": null
+    "assigned_iteration": null,
+    "child": true,
+    "parent": "PROJ-1"
   },
   {
     "name": "Issue 4",
     "id": "TEST-4",
     "status": 100,
     "endDate": {
-      "y": "2025",
-      "m": "1",
-      "d": "4"
+      "y": 2025,
+      "m": 1,
+      "d": 12
     },
     "startDate": {
-      "y": "2025",
-      "m": "1",
-      "d": "4"
+      "y": 2025,
+      "m": 1,
+      "d": 12
     },
     "issue_type": "TASK",
     "assigned_to": "EMP01",
@@ -123,21 +127,23 @@
     "ref_by": null,
     "dependency_to": "TEST-7",
     "dependency_by": "TEST-4",
-    "assigned_iteration": null
+    "assigned_iteration": null,
+    "child": true,
+    "parent": "PROJ-1"
   },
   {
     "name": "Issue 5",
     "id": "TEST-5",
     "status": 100,
     "endDate": {
-      "y": "2025",
-      "m": "1",
-      "d": "5"
+      "y": 2025,
+      "m": 1,
+      "d": 11
     },
     "startDate": {
-      "y": "2025",
-      "m": "1",
-      "d": "5"
+      "y": 2025,
+      "m": 1,
+      "d": 11
     },
     "issue_type": "TASK",
     "assigned_to": "EMP01",
@@ -155,21 +161,23 @@
     "ref_by": null,
     "dependency_to": "TEST-7",
     "dependency_by": "TEST-8",
-    "assigned_iteration": null
+    "assigned_iteration": null,
+    "child": true,
+    "parent": "PROJ-1"
   },
   {
     "name": "Issue 6",
     "id": "TEST-6",
     "status": 100,
     "endDate": {
-      "y": "2025",
-      "m": "1",
-      "d": "6"
+      "y": 2025,
+      "m": 1,
+      "d": 10
     },
     "startDate": {
-      "y": "2025",
-      "m": "1",
-      "d": "6"
+      "y": 2025,
+      "m": 1,
+      "d": 10
     },
     "issue_type": "TASK",
     "assigned_to": "EMP01",
@@ -187,21 +195,23 @@
     "ref_by": null,
     "dependency_to": "TEST-7",
     "dependency_by": "TEST-8",
-    "assigned_iteration": null
+    "assigned_iteration": null,
+    "child": true,
+    "parent": "PROJ-1"
   },
   {
     "name": "Issue 7",
     "id": "TEST-7",
     "status": 100,
     "endDate": {
-      "y": "2025",
-      "m": "1",
-      "d": "7"
+      "y": 2025,
+      "m": 1,
+      "d": 9
     },
     "startDate": {
-      "y": "2025",
-      "m": "1",
-      "d": "7"
+      "y": 2025,
+      "m": 1,
+      "d": 9
     },
     "issue_type": "TASK",
     "assigned_to": "EMP01",
@@ -219,21 +229,23 @@
     "ref_by": null,
     "dependency_to": "TEST-7",
     "dependency_by": "TEST-8",
-    "assigned_iteration": null
+    "assigned_iteration": null,
+    "child": true,
+    "parent": "PROJ-1"
   },
   {
     "name": "Issue 8",
     "id": "TEST-8",
     "status": 100,
     "endDate": {
-      "y": "2025",
-      "m": "1",
-      "d": "8"
+      "y": 2025,
+      "m": 1,
+      "d": 8
     },
     "startDate": {
-      "y": "2025",
-      "m": "1",
-      "d": "8"
+      "y": 2025,
+      "m": 1,
+      "d": 8
     },
     "issue_type": "TASK",
     "assigned_to": "EMP01",
@@ -251,21 +263,23 @@
     "ref_by": null,
     "dependency_to": "TEST-7",
     "dependency_by": "TEST-8",
-    "assigned_iteration": null
+    "assigned_iteration": null,
+    "child": true,
+    "parent": "PROJ-1"
   },
   {
     "name": "Issue 9",
     "id": "TEST-9",
     "status": 100,
     "endDate": {
-      "y": "2025",
-      "m": "1",
-      "d": "9"
+      "y": 2025,
+      "m": 1,
+      "d": 7
     },
     "startDate": {
-      "y": "2025",
-      "m": "1",
-      "d": "9"
+      "y": 2025,
+      "m": 1,
+      "d": 7
     },
     "issue_type": "TASK",
     "assigned_to": "EMP01",
@@ -283,21 +297,23 @@
     "ref_by": null,
     "dependency_to": "TEST-7",
     "dependency_by": "TEST-8",
-    "assigned_iteration": null
+    "assigned_iteration": null,
+    "child": true,
+    "parent": "PROJ-1"
   },
   {
     "name": "Issue 10",
     "id": "TEST-10",
     "status": 100,
     "endDate": {
-      "y": "2025",
-      "m": "1",
-      "d": "10"
+      "y": 2025,
+      "m": 1,
+      "d": 6
     },
     "startDate": {
-      "y": "2025",
-      "m": "1",
-      "d": "10"
+      "y": 2025,
+      "m": 1,
+      "d": 6
     },
     "issue_type": "TASK",
     "assigned_to": "EMP01",
@@ -315,21 +331,23 @@
     "ref_by": null,
     "dependency_to": "TEST-7",
     "dependency_by": "TEST-8",
-    "assigned_iteration": null
+    "assigned_iteration": null,
+    "child": true,
+    "parent": "PROJ-1"
   },
   {
     "name": "Issue 11",
     "id": "TEST-11",
     "status": 100,
     "endDate": {
-      "y": "2025",
-      "m": "1",
-      "d": "11"
+      "y": 2025,
+      "m": 1,
+      "d": 5
     },
     "startDate": {
-      "y": "2025",
-      "m": "1",
-      "d": "11"
+      "y": 2025,
+      "m": 1,
+      "d": 5
     },
     "issue_type": "TASK",
     "assigned_to": "EMP01",
@@ -347,21 +365,23 @@
     "ref_by": null,
     "dependency_to": "TEST-7",
     "dependency_by": "TEST-8",
-    "assigned_iteration": null
+    "assigned_iteration": null,
+    "child": true,
+    "parent": "PROJ-1"
   },
   {
     "name": "Issue 12",
     "id": "TEST-12",
     "status": 100,
     "endDate": {
-      "y": "2025",
-      "m": "1",
-      "d": "12"
+      "y": 2025,
+      "m": 1,
+      "d": 4
     },
     "startDate": {
-      "y": "2025",
-      "m": "1",
-      "d": "12"
+      "y": 2025,
+      "m": 1,
+      "d": 4
     },
     "issue_type": "TASK",
     "assigned_to": "EMP01",
@@ -379,21 +399,23 @@
     "ref_by": null,
     "dependency_to": "TEST-7",
     "dependency_by": "TEST-8",
-    "assigned_iteration": null
+    "assigned_iteration": null,
+    "child": true,
+    "parent": "PROJ-1"
   },
   {
     "name": "Issue 13",
     "id": "TEST-13",
     "status": 100,
     "endDate": {
-      "y": "2025",
-      "m": "1",
-      "d": "13"
+      "y": 2025,
+      "m": 1,
+      "d": 3
     },
     "startDate": {
-      "y": "2025",
-      "m": "1",
-      "d": "13"
+      "y": 2025,
+      "m": 1,
+      "d": 3
     },
     "issue_type": "TASK",
     "assigned_to": "EMP01",
@@ -411,7 +433,9 @@
     "ref_by": null,
     "dependency_to": "TEST-7",
     "dependency_by": "TEST-8",
-    "assigned_iteration": null
+    "assigned_iteration": null,
+    "child": true,
+    "parent": "PROJ-1"
   },
   {
     "name": "Project 2",
@@ -473,7 +497,9 @@
     "ref_by": null,
     "dependency_to": "TEST-7",
     "dependency_by": "TEST-8",
-    "assigned_iteration": null
+    "assigned_iteration": null,
+    "child": true,
+    "parent": "PROJ-2"
   },
   {
     "name": "Issue 15",
@@ -505,7 +531,9 @@
     "ref_by": null,
     "dependency_to": "TEST-7",
     "dependency_by": "TEST-8",
-    "assigned_iteration": null
+    "assigned_iteration": null,
+    "child": true,
+    "parent": "PROJ-2"
   },
   {
     "name": "Issue 16",
@@ -537,7 +565,9 @@
     "ref_by": null,
     "dependency_to": "TEST-7",
     "dependency_by": "TEST-8",
-    "assigned_iteration": null
+    "assigned_iteration": null,
+    "child": true,
+    "parent": "PROJ-2"
   },
   {
     "name": "Issue 17",
@@ -569,7 +599,9 @@
     "ref_by": null,
     "dependency_to": "TEST-7",
     "dependency_by": "TEST-8",
-    "assigned_iteration": null
+    "assigned_iteration": null,
+    "child": true,
+    "parent": "PROJ-2"
   },
   {
     "name": "Issue 18",
@@ -601,7 +633,9 @@
     "ref_by": null,
     "dependency_to": "TEST-7",
     "dependency_by": "TEST-8",
-    "assigned_iteration": null
+    "assigned_iteration": null,
+    "child": true,
+    "parent": "PROJ-2"
   },
   {
     "name": "Issue 19",
@@ -633,7 +667,9 @@
     "ref_by": null,
     "dependency_to": "TEST-7",
     "dependency_by": "TEST-8",
-    "assigned_iteration": null
+    "assigned_iteration": null,
+    "child": true,
+    "parent": "PROJ-2"
   },
   {
     "name": "Issue 20",
@@ -665,7 +701,9 @@
     "ref_by": null,
     "dependency_to": "TEST-7",
     "dependency_by": "TEST-8",
-    "assigned_iteration": null
+    "assigned_iteration": null,
+    "child": true,
+    "parent": "PROJ-2"
   },
   {
     "name": "Issue 21",
@@ -697,7 +735,9 @@
     "ref_by": null,
     "dependency_to": "TEST-7",
     "dependency_by": "TEST-8",
-    "assigned_iteration": null
+    "assigned_iteration": null,
+    "child": true,
+    "parent": "PROJ-2"
   },
   {
     "name": "Issue 22",
@@ -729,7 +769,9 @@
     "ref_by": null,
     "dependency_to": "TEST-7",
     "dependency_by": "TEST-8",
-    "assigned_iteration": null
+    "assigned_iteration": null,
+    "child": true,
+    "parent": "PROJ-2"
   },
   {
     "name": "Issue 23",
@@ -761,7 +803,9 @@
     "ref_by": null,
     "dependency_to": "TEST-7",
     "dependency_by": "TEST-8",
-    "assigned_iteration": null
+    "assigned_iteration": null,
+    "child": true,
+    "parent": "PROJ-2"
   },
   {
     "name": "Issue 24",
@@ -793,7 +837,9 @@
     "ref_by": null,
     "dependency_to": "TEST-7",
     "dependency_by": "TEST-8",
-    "assigned_iteration": null
+    "assigned_iteration": null,
+    "child": true,
+    "parent": "PROJ-2"
   },
   {
     "name": "Issue 25",
@@ -825,7 +871,9 @@
     "ref_by": null,
     "dependency_to": "TEST-7",
     "dependency_by": "TEST-8",
-    "assigned_iteration": null
+    "assigned_iteration": null,
+    "child": true,
+    "parent": "PROJ-2"
   },
   {
     "name": "Issue 26",
@@ -857,7 +905,9 @@
     "ref_by": null,
     "dependency_to": "TEST-7",
     "dependency_by": "TEST-8",
-    "assigned_iteration": null
+    "assigned_iteration": null,
+    "child": true,
+    "parent": "PROJ-2"
   },
   {
     "name": "Issue 27",
@@ -889,7 +939,9 @@
     "ref_by": null,
     "dependency_to": "TEST-7",
     "dependency_by": "TEST-8",
-    "assigned_iteration": null
+    "assigned_iteration": null,
+    "child": true,
+    "parent": "PROJ-2"
   },
   {
     "name": "Project 3",
@@ -951,7 +1003,9 @@
     "ref_by": null,
     "dependency_to": "TEST-7",
     "dependency_by": "TEST-8",
-    "assigned_iteration": null
+    "assigned_iteration": null,
+    "child": true,
+    "parent": "PROJ-3"
   },
   {
     "name": "Issue 29",
@@ -983,7 +1037,9 @@
     "ref_by": null,
     "dependency_to": "TEST-7",
     "dependency_by": "TEST-8",
-    "assigned_iteration": null
+    "assigned_iteration": null,
+    "child": true,
+    "parent": "PROJ-3"
   },
   {
     "name": "Issue 30",
@@ -1015,7 +1071,9 @@
     "ref_by": null,
     "dependency_to": "TEST-7",
     "dependency_by": "TEST-8",
-    "assigned_iteration": null
+    "assigned_iteration": null,
+    "child": true,
+    "parent": "PROJ-3"
   },
   {
     "name": "Issue 31",
@@ -1047,43 +1105,13 @@
     "ref_by": null,
     "dependency_to": "TEST-7",
     "dependency_by": "TEST-8",
-    "assigned_iteration": null
-  },
-  {
-    "id": "0",
-    "name": "Project Unassigned",
-    "issue_type": "PROJ"
-  },
-  {
-    "name": "Issue 1",
-    "id": "TEST-1",
-    "status": 100,
-    "endDate": {
-      "y": "2025",
-      "m": "1",
-      "d": "20"
-    },
-    "startDate": {
-      "y": "2025",
-      "m": "1",
-      "d": "10"
-    },
-    "issue_type": "TASK",
-    "assigned_to": "EMP01",
-    "assigned_date": "2024-11-30T00:00:00.000Z",
-    "created_by": "EMP01",
-    "created_date": "2024-11-30T00:00:00.000Z",
-    "updated_by": "EMP01",
-    "updated_date": "2024-11-30T00:00:00.000Z",
-    "summary": "This is the first issue",
-    "description": "This is the first issue's description",
-    "acceptance_criteria": "This is the first issue's acceptance criteria",
-    "ref_to": null,
-    "ref_by": null,
-    "dependency_to": "TEST-7",
-    "dependency_by": "TEST-8",
     "assigned_iteration": null,
     "child": true,
-    "parent": "0"
+    "parent": "PROJ-3"
+  },
+  {
+    "id": "PROJ-UNASSIGNED",
+    "name": "Project Unassigned",
+    "issue_type": "PROJ"
   }
 ]

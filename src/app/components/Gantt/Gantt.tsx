@@ -9,35 +9,35 @@ import GanttHeader from './components/_GanttHeader';
 import GanttBody from './components/_GanttBody';
 
 // Add interfaces
-interface TimeRange {
-  fromSelectMonth: number;
-  fromSelectYear: string;
-  toSelectMonth: number;
-  toSelectYear: string;
-}
+// interface TimeRange {
+//   fromSelectMonth: number;
+//   fromSelectYear: string;
+//   toSelectMonth: number;
+//   toSelectYear: string;
+// }
 
-interface DateObject {
-  y: number;
-  m: number;
-  d: number;
-}
-interface Issue {
-  id: string;
-  name: string;
-  issue_type: 'TASK' | 'PROJ' | 'STORY';
-  startDate?: DateObject;
-  endDate?: DateObject;
-  assigned_iteration?: number;
-  children?: Issue[];
-  ref_to?: string[];
-  child?: boolean;
-  parent?: string;
-}
+// interface DateObject {
+//   y: number;
+//   m: number;
+//   d: number;
+// }
+// interface Issue {
+//   id: string;
+//   name: string;
+//   issue_type: 'TASK' | 'PROJ' | 'STORY';
+//   startDate?: DateObject;
+//   endDate?: DateObject;
+//   assigned_iteration?: number;
+//   children?: Issue[];
+//   ref_to?: string[];
+//   child?: boolean;
+//   parent?: string;
+// }
 
-interface Project extends Issue {
-  name: string;
-  children: Issue[];
-}
+// interface Project extends Issue {
+//   name: string;
+//   children: Issue[];
+// }
 
 interface GanttProps {
   localData?: Issue[];
@@ -55,10 +55,12 @@ interface GanttProps {
 //   }),
 // }));
 
-export default function Gantt({ localData, writeLocalData }: GanttProps) {
+export default function Gantt({ localData }: GanttProps) {
   const [timeRange, setTimeRange] = useState<TimeRange>({} as TimeRange);
   const [issues, setIssues] = useState<Issue[]>([]);
   const [projects, setProjects] = useState<Project[]>([]);
+  const [issuesUpdating, setIssuesUpdating] = useState<boolean>(false);
+  const [newIssueData, setNewProjectData] = useState<Project[]>([]);
 
   const gridHeaderRef = useRef<HTMLDivElement>(null);
   const gridBodyRef = useRef<HTMLDivElement>(null);
@@ -79,6 +81,96 @@ export default function Gantt({ localData, writeLocalData }: GanttProps) {
     }
   };
 
+  const buildData = async (updatedData: Project[] = []) => {
+    const results: Project[] = updatedData?.length
+      ? updatedData
+      : localData || [];
+    if (!results?.length) return;
+    // Placeholder variable for all projects
+    const projects: Project[] = [];
+    // Placeholder project for unassigned issues
+    const unassignedProject: Project = {
+      id: '0',
+      name: 'Project Unassigned',
+      children: [],
+      issue_type: 'PROJ',
+    };
+    // Loop through the results and add the projects to the projects array.
+    results.forEach((issue: Project) => {
+      if (issue.issue_type === 'PROJ') {
+        projects.push(issue as Project);
+      }
+    });
+    // Loop through the projects and add the children to the project.
+    projects.forEach((project) => {
+      if (!project) {
+        return;
+      }
+      project.children = [];
+      // Loop through the returned issues and add them as children to the parent project.
+      results.forEach((issue: Project) => {
+        // If the issue is a child of the project, add it to the project children array.
+        if (issue?.ref_to?.includes(project.id)) {
+          project?.children?.push(issue as Issue);
+        }
+        if (!issue?.ref_to && issue.issue_type !== 'PROJ') {
+          // Check to make sure the project is not already in the unassigned project
+          const projectExists = unassignedProject?.children?.find(
+            (child: Issue) => child.id === issue.id
+          );
+          // If the project does not exist in the unassigned project, add it.
+          if (!projectExists) {
+            unassignedProject?.children?.push(issue as Issue);
+          }
+        }
+      });
+    });
+    // Add the unassigned project to the projects array
+    if (
+      !projects.filter((project) => project.id === 'PROJ-UNASSIGNED').length
+    ) {
+      projects.push(unassignedProject);
+    }
+    const sortedProjects = projects.sort((a, b) => {
+      if (!(a?.id?.includes('-') || b?.id?.includes('-'))) {
+        return +a.id - +b.id;
+      } else {
+        return +a.id.split('-')[1] - +b.id.split('-')[1];
+      }
+    });
+    setProjects(sortedProjects);
+    const issueCollection: Issue[] = [];
+    // Organize the issues for each Project by the issue number
+    sortedProjects.forEach((project) => {
+      issueCollection.push(project as Issue);
+      if (!project.children?.length) return;
+      let sortedChildren: Issue[] = [];
+      const sortingMethod = 'alpha'; // TODO: Make this changeable by the user
+      if (sortingMethod === 'alpha') {
+        // Organize them by the project number
+        sortedChildren = project.children.sort((a, b) => {
+          if (!(a?.id?.includes('-') || b?.id?.includes('-'))) {
+            return +a.id - +b.id;
+          } else {
+            return +a.id.split('-')[1] - +b.id.split('-')[1];
+          }
+        });
+      } else {
+        // TODO: Add sorting logic to be by start date and end date.
+      }
+      sortedChildren.forEach((childIssue) => {
+        issueCollection.push({
+          ...childIssue,
+          child: true,
+          parent: project.id,
+        });
+      });
+    });
+    if (issueCollection.length) {
+      await setIssues(issueCollection);
+    }
+  };
+
   // Get Issues from the API
   useEffect(() => {
     // By Default, set the time range to the current month and year to one month in the future.
@@ -91,103 +183,21 @@ export default function Gantt({ localData, writeLocalData }: GanttProps) {
       });
     })();
     // Get the issues from the API and handle assigning to the correct project
-    (async () => {
-      const results: Issue[] = localData || [];
-      // // TODO: HACK: This is used to decide if the data is coming from local JSON file or a DB. Remove this when we have working env variables.
-      // const dev_datasource = localData ? 'local' : false;
-      // if (dev_datasource === 'local') {
-      //   console.log('testing here', localData);
-      //   results = await fetch('/api/get/issue').then((response) => {
-      //     console.log('testing here', response);
-      //     return response.json();
-      //   });
-      //   results = localData || [];
-      // } else {
-      //   // Fetch the issues from the API
-      //   // results = await fetch('/api/get/issue').then((response) => {
-      //   //   console.log(response);
-      //   //   response.json();
-      //   // });
-      // }
-      if (!results?.length) return;
-      // Placeholder variable for all projects
-      const projects: Project[] = [];
-      // Placeholder project for unassigned issues
-      const unassignedProject: Project = {
-        id: '0',
-        name: 'Project Unassigned',
-        children: [],
-        issue_type: 'PROJ',
-      };
-      // Loop through the results and add the projects to the projects array.
-      results.forEach((issue: Issue) => {
-        if (issue.issue_type === 'PROJ') {
-          projects.push(issue as Project);
-        }
-      });
-      // Loop through the projects and add the children to the project.
-      projects.forEach((project) => {
-        project.children = [];
-        // Loop through the returned issues and add them as children to the parent project.
-        results.forEach((issue: Issue) => {
-          // If the issue is a child of the project, add it to the project children array.
-          if (issue?.ref_to?.includes(project.id)) {
-            project.children.push(issue);
-          }
-          if (!issue?.ref_to && issue.issue_type !== 'PROJ') {
-            // Check to make sure the project is not already in the unassigned project
-            const projectExists = unassignedProject.children.find(
-              (child: Issue) => child.id === issue.id
-            );
-            // If the project does not exist in the unassigned project, add it.
-            if (!projectExists) {
-              unassignedProject.children.push(issue as Issue);
-            }
-          }
-        });
-      });
-      // Add the unassigned project to the projects array
-      projects.push(unassignedProject);
-      const sortedProjects = projects.sort((a, b) => {
-        if (!(a?.id?.includes('-') || b?.id?.includes('-'))) {
-          return +a.id - +b.id;
-        } else {
-          return +a.id.split('-')[1] - +b.id.split('-')[1];
-        }
-      });
-      setProjects(sortedProjects);
-      const issueCollection: Issue[] = [];
-      // Organize the issues for each Project by the issue number
-      sortedProjects.forEach((project) => {
-        issueCollection.push(project);
-        if (!project.children?.length) return;
-        let sortedChildren: Issue[] = [];
-        const sortingMethod = 'alpha'; // TODO: Make this changeable by the user
-        if (sortingMethod === 'alpha') {
-          // Organize them by the project number
-          sortedChildren = project.children.sort((a, b) => {
-            if (!(a?.id?.includes('-') || b?.id?.includes('-'))) {
-              return +a.id - +b.id;
-            } else {
-              return +a.id.split('-')[1] - +b.id.split('-')[1];
-            }
-          });
-        } else {
-          // TODO: Add sorting logic to be by start date and end date.
-        }
-        sortedChildren.forEach((childIssue) => {
-          issueCollection.push({
-            ...childIssue,
-            child: true,
-            parent: project.id,
-          });
-        });
-      });
-      if (issueCollection.length) {
-        await setIssues(issueCollection);
-      }
-    })();
+    buildData();
   }, [localData]);
+
+  useEffect(() => {
+    if (issuesUpdating) {
+      setProjects(newIssueData);
+      setIssuesUpdating(false);
+    }
+  }, [issuesUpdating, issues, newIssueData]);
+
+  const updateNewIssueData = (data: Project[]) => {
+    setNewProjectData(data);
+    setIssuesUpdating(true);
+    buildData(data as Project[]);
+  };
 
   return (
     <div id='gantt'>
@@ -203,11 +213,11 @@ export default function Gantt({ localData, writeLocalData }: GanttProps) {
           <Grid size={12}>
             <GanttBody
               issues={issues as Issue[]}
-              projects={projects as Project[]}
+              projects={projects}
               timeRange={timeRange}
               gridBodyRef={gridBodyRef as React.RefObject<HTMLDivElement>}
               handleXScroll={handleGridBodyScroll}
-              writeLocalData={writeLocalData}
+              writeLocalData={(data) => updateNewIssueData(data)}
             />
           </Grid>
         </Grid>

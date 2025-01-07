@@ -36,26 +36,9 @@ const IssueNameDiv = styled('div')(({ theme }) => ({
 //   height: '20px',
 // }));
 
-interface DateObject {
-  y: number;
-  m: number;
-  d: number;
-}
-
-// Add interface for Issue
-interface Issue {
-  id: string;
-  name: string;
-  issue_type: 'TASK' | 'PROJ' | 'STORY';
-  startDate?: DateObject;
-  endDate?: DateObject;
-  assigned_iteration?: number;
-  children?: Issue[];
-}
-
 // Add interface for component props
 interface IssueHeaderProps {
-  issues: Issue[];
+  issues: Project[];
 }
 
 // Exported Components
@@ -76,7 +59,7 @@ export default function IssueHeader({ issues }: IssueHeaderProps) {
    *
    * @param {Object} issue The issue that is being toggled.
    */
-  const handleToggleIssue = (issue: Issue): void => {
+  const handleToggleIssue = (issue: Project): void => {
     const taskRowChildren = document.querySelectorAll(`.child-${issue.id}`);
     const taskGridChildren = document.querySelectorAll(
       `.task_row_header_child_of-${issue.id}`
@@ -102,7 +85,7 @@ export default function IssueHeader({ issues }: IssueHeaderProps) {
           if (!issue) return;
           return (
             <div
-              key={`issueHeader-issue-${i}`}
+              key={`issueHeader-${issue.id}-${i}`}
               className={
                 issue.child ? `issue hidden child-${issue.parent}` : 'issue'
               }
